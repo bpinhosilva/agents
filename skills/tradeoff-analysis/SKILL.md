@@ -24,6 +24,10 @@ Do NOT use for:
 - Pure preference/style choices with no measurable impact
 - Problems where the real blocker is missing requirements, not missing analysis — go elicit requirements first
 
+## Interaction Protocol
+
+If the user does not provide enough context (e.g., missing constraints, unclear options, lack of specific goals), **do not invent them**. State what is missing and ask the user to provide the assumptions, non-goals, or specific options *before* generating the matrix. Only proceed to the Seven Steps once you have a clear understanding of the decision space.
+
 ## The Seven Steps (do them in order)
 
 Skipping or reordering steps is the most common failure mode. In particular: **do not score options before weights are set**, and **do not set weights after seeing option scores** — that is reverse-engineering the answer you already wanted.
@@ -81,7 +85,9 @@ Weighted score = Σ (weight × score) per option.
 
 ## Output Template
 
-Produce exactly this structure. Keep prose tight; the matrix does the heavy lifting.
+Before generating the Markdown template below, **you must output a brief paragraph explicitly stating your understanding of the core constraints**. This ensures you clarify the problem space before assigning weights.
+
+After stating your reasoning, produce exactly this structure. Keep prose tight; the matrix does the heavy lifting.
 
 ```markdown
 ## Decision
