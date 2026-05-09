@@ -202,7 +202,7 @@ One-way door / Two-way door — <brief reasoning, e.g. "datastore choice; migrat
 
 **Anti-patterns to avoid:**
 - **Scoring before weighting.** Guarantees confirmation bias. Weights first, always.
-- **Adjusting weights after seeing scores.** This is reverse-engineering, not analysis. If it happens, your preference is the hypothesis — go falsify it, don't launder it.
+- **Adjusting weights until your favorite wins.** This is reverse-engineering, not analysis. If it happens, your preference is the hypothesis — go falsify it, don't launder it.
 - **Generic criteria copy-pasted across decisions.** Criteria must be derived from *this* decision's requirements and constraints.
 - **Ignoring dominated options instead of eliminating them.** Note and cut; don't pad the matrix.
 - **Treating one-way doors like two-way doors.** The cost of being wrong is asymmetric; the analysis depth should reflect that.
@@ -212,6 +212,7 @@ One-way door / Two-way door — <brief reasoning, e.g. "datastore choice; migrat
 
 **Stop and redo if:**
 - You wrote the recommendation before you built the matrix
+- Weights were adjusted after seeing scores
 - Every option scores within 5% of every other — criteria aren't discriminating
 - No assumption or non-goal was ever stated
 - The leading option has a high-likelihood, high-impact risk with no mitigation
