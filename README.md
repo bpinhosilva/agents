@@ -10,7 +10,7 @@ Each directory under `skills/` is a self-contained skill that can be invoked by 
 
 | Skill | Purpose |
 |-------|---------|
-| [`tradeoff-analysis`](skills/tradeoff-analysis/SKILL.md) | Produces a structured, weighted trade-off analysis and recommendation for technology and system-design decisions (databases, protocols, cloud services, build-vs-buy, etc.), with explicit assumptions, non-goals, reversibility (one-way vs two-way door), risk register, and sensitivity analysis. |
+| [`tradeoff-analysis`](skills/tradeoff-analysis/SKILL.md) | Guides a structured, collaborative trade-off analysis for technology and system-design decisions (databases, protocols, cloud services, build-vs-buy, etc.), keeping the user involved through assumptions, criteria, weights, reversibility, risks, and sensitivity checks before a recommendation is finalized. |
 
 ## Repository layout
 
