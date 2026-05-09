@@ -52,6 +52,13 @@ On the **first turn**, do only three things unless the user already supplied ric
 - Name the most important missing constraints.
 - Ask 3–6 high-leverage clarifying questions.
 
+Facilitation principles (apply throughout):
+- Be collaborative, not performative.
+- Make disagreements explicit instead of smoothing them over.
+- If the user seems unsure, switch into coaching mode: explain the trade-off, then ask a focused follow-up question.
+- If the user requests speed, provide a **draft** answer with clearly labeled assumptions and invite correction.
+- Never hide uncertainty; use it to decide where a spike, benchmark, or prototype would help.
+
 ## The Seven Steps (do them in order)
 
 Skipping or reordering steps is the most common failure mode. In particular: **do not score options before weights are set**, and **do not set weights after seeing option scores** — that is reverse-engineering the answer you already wanted.
@@ -65,6 +72,18 @@ Unless the user explicitly asks for a compact mode, do not run all seven steps w
 5. **Score each option** against each criterion with a short justification.
 6. **Analyze risk & reversibility** — one-way vs two-way door, top risks with mitigations.
 7. **Recommend, with sensitivity check** — would the answer change if a weight or score shifted?
+
+## Quick Reference
+
+| Symptom                                       | Fix                                                                 |
+|-----------------------------------------------|---------------------------------------------------------------------|
+| Recommendation feels pre-baked                | Set weights *before* scoring; don't edit weights after scoring      |
+| Everything scores 3–4; no signal              | Criteria too generic — re-derive from actual requirements           |
+| 10+ criteria, analysis bloats                 | Merge overlapping criteria; drop any with weight < 5                |
+| Prose recommendation without numbers          | Build the matrix; numbers force honesty                              |
+| No mention of what could go wrong             | Add risk register for the leading option                            |
+| "It depends" with no commitment               | Run the sensitivity check; state the trigger that would flip the call |
+| Reversibility not discussed on a big decision | Explicitly label one-way vs two-way door                             |
 
 ## Step Details
 
@@ -123,16 +142,6 @@ Use this step to surface blind spots. Ask the user what would make the decision 
 
 Before presenting the recommendation as final, summarize the decisive factors and ask whether the user wants to challenge any weight, score, or assumption.
 
-## Facilitation Rules
-
-- Be collaborative, not performative.
-- Ask for confirmation before moving to the next major step.
-- Make disagreements explicit instead of smoothing them over.
-- If the user seems unsure, switch into coaching mode: explain the trade-off, then ask a focused follow-up question.
-- If the user requests speed, provide a **draft** answer with clearly labeled assumptions and invite correction.
-- Keep momentum: prefer a few high-leverage questions over a long questionnaire.
-- Never hide uncertainty; use it to decide where a spike, benchmark, or prototype would help.
-
 ## Output Template
 
 Before generating the Markdown template below, **you must output a brief paragraph explicitly stating your current understanding of the core constraints**. This ensures you clarify the problem space before assigning weights.
@@ -189,20 +198,9 @@ One-way door / Two-way door — <brief reasoning, e.g. "datastore choice; migrat
 **Choose <option>.** Decisive reasons: <2–3 bullets>. Revisit if <trigger conditions>.
 ```
 
-## Quick Reference
+## Guard Rails
 
-| Symptom                                       | Fix                                                                 |
-|-----------------------------------------------|---------------------------------------------------------------------|
-| Recommendation feels pre-baked                | Set weights *before* scoring; don't edit weights after scoring      |
-| Everything scores 3–4; no signal              | Criteria too generic — re-derive from actual requirements           |
-| 10+ criteria, analysis bloats                 | Merge overlapping criteria; drop any with weight < 5                |
-| Prose recommendation without numbers          | Build the matrix; numbers force honesty                              |
-| No mention of what could go wrong             | Add risk register for the leading option                            |
-| "It depends" with no commitment               | Run the sensitivity check; state the trigger that would flip the call |
-| Reversibility not discussed on a big decision | Explicitly label one-way vs two-way door                             |
-
-## Common Mistakes
-
+**Anti-patterns to avoid:**
 - **Scoring before weighting.** Guarantees confirmation bias. Weights first, always.
 - **Adjusting weights until your favorite wins.** This is reverse-engineering, not analysis. If it happens, your preference is the hypothesis — go falsify it, don't launder it.
 - **Generic criteria copy-pasted across decisions.** Criteria must be derived from *this* decision's requirements and constraints.
@@ -212,11 +210,10 @@ One-way door / Two-way door — <brief reasoning, e.g. "datastore choice; migrat
 - **No sensitivity analysis.** A recommendation that quietly depends on a single shaky assumption is a landmine.
 - **Risk register as an afterthought.** A high-score option with unmitigated high/high risks is not the winner.
 
-## Red Flags — stop and redo
-
+**Stop and redo if:**
 - You wrote the recommendation before you built the matrix
-- Weights were edited after seeing scores
-- No assumption or non-goal is stated
+- Weights were adjusted after seeing scores
 - Every option scores within 5% of every other — criteria aren't discriminating
+- No assumption or non-goal was ever stated
 - The leading option has a high-likelihood, high-impact risk with no mitigation
 - The decision is one-way and you haven't said so
