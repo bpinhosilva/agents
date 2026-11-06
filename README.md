@@ -10,7 +10,7 @@ Each directory under `skills/` is a self-contained skill that can be invoked by 
 
 | Skill | Purpose |
 |-------|---------|
-| [`simplify`](skills/simplify/SKILL.md) | Explains concepts, rewrites text, or produces documentation using ASD-STE100 Simplified Technical English (STE) rules for clear, unambiguous communication. |
+| [`ste-simplify`](skills/ste-simplify/SKILL.md) | Explains concepts, rewrites text, or produces documentation using ASD-STE100 Simplified Technical English (STE) rules for clear, unambiguous communication. |
 | [`tradeoff-analysis`](skills/tradeoff-analysis/SKILL.md) | Guides a structured, collaborative trade-off analysis for technology and system-design decisions (databases, protocols, cloud services, build-vs-buy, etc.), keeping the user involved through assumptions, criteria, weights, reversibility, risks, and sensitivity checks before a recommendation is finalized. |
 
 ## Repository layout
